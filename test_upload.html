@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Upload Template</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .upload-area { 
+            border: 2px dashed #ccc; 
+            padding: 20px; 
+            text-align: center; 
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        .upload-area:hover { border-color: #007bff; }
+        .preview { max-width: 300px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Test Upload Template</h1>
+    
+    <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+        <p>Click để chọn file template</p>
+        <input type="file" id="fileInput" accept=".png,.jpg,.jpeg" style="display: none;">
+    </div>
+    
+    <div id="preview"></div>
+    
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                console.log('File selected:', file.name, file.type, file.size);
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    console.log('File loaded successfully');
+                    const img = new Image();
+                    img.onload = function() {
+                        console.log('Image loaded:', img.width, 'x', img.height);
+                        document.getElementById('preview').innerHTML = `
+                            <h3>Preview:</h3>
+                            <img src="${e.target.result}" class="preview" alt="Template Preview">
+                            <p>Kích thước: ${img.width} x ${img.height} pixels</p>
+                            <p>File: ${file.name}</p>
+                        `;
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

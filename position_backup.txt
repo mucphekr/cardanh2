@@ -1,0 +1,17 @@
+CẤU HÌNH VỊ TRÍ TEXT - THẺ SINH VIÊN UNIVERSITY OF LONDON
+================================================================
+
+1. VỊ TRÍ TÊN SINH VIÊN ĐẦY ĐỦ:
+   - Tỷ lệ ngang (X): 0.1
+   - Tỷ lệ dọc (Y): 0.222  
+   - Kích thước font: 130
+
+2. VỊ TRÍ TÊN (FIRST NAME) SAU "DEAR:":
+   - Tỷ lệ ngang (X): 0.18
+   - Tỷ lệ dọc (Y): 0.333
+   - Kích thước font: 130
+
+Lưu ý: 
+- Các tỷ lệ (0-1) thay vì tọa độ tuyệt đối
+- Ví dụ: 0.1 = 10% từ trái sang phải
+- Ngày lưu: 19/12/2024

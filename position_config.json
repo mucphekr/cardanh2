@@ -1,0 +1,16 @@
+{
+  "full_name_position": {
+    "x_ratio": 0.1,
+    "y_ratio": 0.222,
+    "font_size": 130,
+    "description": "Vị trí tên sinh viên đầy đủ"
+  },
+  "first_name_position": {
+    "x_ratio": 0.18,
+    "y_ratio": 0.333,
+    "font_size": 130,
+    "description": "Vị trí tên (First Name) sau Dear:"
+  },
+  "last_updated": "2024-12-19",
+  "notes": "Cấu hình vị trí text cho thẻ sinh viên University Of London"
+}
